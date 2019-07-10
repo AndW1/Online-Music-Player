@@ -1,0 +1,129 @@
+﻿<Window x:Class="MusicPlayerOnline.View.Authointeficator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicPlayerOnline.View"
+        mc:Ignorable="d"
+        Title="Authointeficator" Height="395" Width="300" WindowStyle="None" Background="LightGray" AllowsTransparency="True"
+        Name="windowsLogin" MouseLeftButtonDown="windowsLogin_MouseLeftButtonDown" Closed="windowsLogin_Closed" Icon="/Image/myicon1.jpg" >
+    <Grid>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Name="rowEmail" Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Name="rowConfirm" Height="40"/>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Ellipse Width="40" Height="40" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,2,2,2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Image/myicon1.jpg" Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button Grid.Column="1"  Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="2,2,5,2"
+             Name="buttonClose"  Click="buttonClose_Click">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Grid >
+                            <Ellipse Fill="LightCoral"></Ellipse>
+                            <Label  VerticalAlignment="Top"
+						       HorizontalAlignment="Center"
+							   FontWeight="Light" FontSize="20" Content="X" Foreground="White" VerticalContentAlignment="Top"></Label>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Login" Foreground="White" FontSize="20" Width="90" HorizontalAlignment="Center" HorizontalContentAlignment="Left"></Label>
+            <TextBox Grid.Column="1" Width="180" Height="30" HorizontalAlignment="Left" Name="textLogin"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Email" Foreground="White" FontSize="20" Width="90" HorizontalAlignment="Center" 
+             VerticalAlignment="Center"      HorizontalContentAlignment="Left"></Label>
+                <TextBox Grid.Column="1" Width="180" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"
+                         Name="textEmail"></TextBox>
+            </Grid>
+            <Button Grid.Row="1" Width="160" Height="40" Background="LightGreen" Content="GET PASSWORD" Foreground="White" FontSize="20"
+            Name="buttonGetPassword" Click="buttonGetPassword_Click"></Button>
+        </Grid>
+        
+        
+        
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Name="checkRegistr"
+                      Checked="checkRegistr_Checked"></CheckBox>
+            <Label Grid.Column="1" Content="Registration" Foreground="White" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+        </Grid>
+
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Password" Foreground="White" FontSize="20" HorizontalAlignment="Center" HorizontalContentAlignment="Left"
+                   VerticalAlignment="Center"></Label>
+            <TextBox Grid.Column="1" Width="180" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Name="textPassword"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Confirm" Foreground="White" FontSize="20" Width="90" HorizontalAlignment="Center" 
+             VerticalAlignment="Center"      HorizontalContentAlignment="Left"></Label>
+            <TextBox Grid.Column="1" Width="180" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Name="textConfirm"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Width="140" Height="30" Background="LightSeaGreen" Content="SEND" Foreground="White" FontSize="15"
+            Name="buttonSend"  Click="buttonSend_Click" ></Button>
+            <Button Grid.Column="1" Width="100" Height="30"  Content="CLEAR" Foreground="White" FontSize="15" Name="buttonClear"
+            Background="Gray"        Click="buttonClear_Click"></Button>
+        </Grid>
+        
+        
+        
+        
+    </Grid>
+</Window>
